@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Todo List</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+	<h1>Welcome to my TODO List</h1>
+	<h3>Create a Todo List</h3>
+		<p>Please use the form below to create a Todo List</p>
+		 <form action="#" th:action="@{/}" th:object="${todoList}" method="post">
+		    <table>
+			<tr>
+		            <td>TODO List</td>
+			    <td><input type="text" th:field="*{title}" /></td>
+			</tr>
+			<tr>
+			    <td>Author:</td>
+			    <td><input type="text" th:field="*{author}" /></td>
+			</tr>
+			<tr>
+		    	    <td>TODO Entry:</td>
+			    <td><input type="text" th:field="*{todoList}" /></td>
+			</tr>
+			<tr>
+			    <td><button type="submit">Submit Your Post</button></td>
+			</tr>
+		    </table>
+		</form>
+
+
+</body>
+</html>
